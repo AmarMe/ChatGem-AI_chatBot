@@ -25,7 +25,7 @@ app.use("/routes",routes);
 
   
 
-// Function to read the last uploaded image as base64
+// Function to read the last uploaded image as base64 format
 function getLastUploadedImageAsBase64() {
   const uploadDir = path.join(__dirname, 'uploads');
   const files = fs.readdirSync(uploadDir);
