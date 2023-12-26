@@ -146,10 +146,10 @@ app.post('/generatethetext', async (req, res) => {
     const chat = model.startChat({
       history: chatHistory,
       generationConfig: {
-        temperature: 0.9,
-        topK: 1,
-        topP: 1,
-        maxOutputTokens: 200,
+        temperature: 0.7,
+        topK: 50,
+        topP: 0.9,
+        maxOutputTokens: 2048,
       },
       safetySettings: [
         {
