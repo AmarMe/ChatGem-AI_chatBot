@@ -13,7 +13,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 Router.route("/add-image").post(upload.single('img'),async (req,res)=>{
   try {
     const ImageBuffer=req.file.buffer;
-    console.log(ImageBuffer);
+    // console.log(ImageBuffer);
 
     await Imageschema.create({ image: ImageBuffer });
 
